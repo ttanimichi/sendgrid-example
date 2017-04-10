@@ -28,8 +28,10 @@ module SendgridExample
       generators.javascripts false
     end
 
-    config.autoload_paths << "#{config.root}/app/services"  
-  
+    config.autoload_paths << "#{config.root}/app/services"
+
+    config.action_mailer.raise_delivery_errors = true
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
