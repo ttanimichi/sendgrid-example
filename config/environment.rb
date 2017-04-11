@@ -8,7 +8,7 @@ ActionMailer::Base.smtp_settings = {
   user_name: ENV['USER_NAME'],
   password:  ENV['PASSWORD'],
   domain:    ENV['DOMAIN'],
-  address:   ENV['ADDRESS'],
+  address: 'smtp.sendgrid.net',
   port: 587,
   authentication: :plain,
   enable_starttls_auto: true
