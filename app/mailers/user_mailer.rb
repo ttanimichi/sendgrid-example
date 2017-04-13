@@ -3,7 +3,8 @@ class UserMailer < ApplicationMailer
 
   default(
     from: "ふろむ <#{ENV['FROM']}>",
-    reply_to: "返信先 <#{ENV['FROM']}>"
+    reply_to: "返信先 <#{ENV['FROM']}>",
+    delivery_method: :smtp
   )
 
   def welcome_email
