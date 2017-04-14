@@ -5,17 +5,9 @@ table
     tr
       th Payload
       th
-      th
-      th
 
   tbody
     - @events.each do |event|
       tr
-        td = event.payload
-        td = link_to 'Show', event
-        td = link_to 'Edit', edit_event_path(event)
-        td = link_to 'Destroy', event, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Event', new_event_path
+        td= event.payload
+        td= link_to 'Show', event
