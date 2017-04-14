@@ -1,0 +1,13 @@
+h1 Listing events
+
+table
+  thead
+    tr
+      th Payload
+      th
+
+  tbody
+    - @events.each do |event|
+      tr
+        td= event.payload.to_json
+        td= link_to 'Show', event
